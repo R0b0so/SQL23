@@ -1,0 +1,23 @@
+---Create a 'STUDENT" Table and use "AND"& "OR"Operators to filter the necessary data asked in the question like: 1)To fetch all the records from the Student table where Age is 18 and ADDRESS is Delhi 2)To fetch all the records from the Student table where NAME is Ram and Age is 18. 3)To fetch all the records from the Student table where NAME is Ram or NAME is SUJIT. 4)To fetch all the records from the Student table where NAME is Ram or Age is 20. 5)To fetch all the records from the Student table where Age is 18 NAME is Ram or RAMESH.
+
+CREATE TABLE IF NOT EXISTS STUDENT (
+    ROLL_NO TEXT PRIMARY KEY,NAME TEXT NOT NULL,ADDRESS TEXT,PHONE TEXT,AGE INTEGER
+);
+
+INSERT INTO STUDENT(ROLL_NO,NAME,ADDRESS,PHONE,AGE) VALUES
+("1","RAM","DELHI","******",18),
+("2","RAMESH","GURGAON","******",18),
+("3","SUJIT","ROHTAK","******",20),
+("4","SURESH","DELHI","******",18);
+
+SELECT * FROM STUDENT;
+
+SELECT * FROM STUDENT WHERE AGE = 18 AND ADDRESS = "DELHI";
+
+SELECT * FROM STUDENT WHERE AGE = 18 AND NAME = "RAM";
+
+SELECT * FROM STUDENT WHERE NAME = "RAM" OR NAME = "SUJIT";
+
+SELECT * FROM STUDENT WHERE NAME = "RAM" OR AGE=20;
+
+SELECT * FROM STUDENT WHERE AGE=18 AND (NAME="RAM" OR NAME="RAMESH");
