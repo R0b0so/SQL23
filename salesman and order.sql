@@ -12,6 +12,7 @@ INSERT INTO Salesman(Salesman_ID,Name,City,commission) VALUES
 
 SELECT * FROM Salesman;
 
+
 CREATE TABLE IF NOT EXISTS Orders (
     Order_No INTEGER,
     Purchase_Amount REAL,
